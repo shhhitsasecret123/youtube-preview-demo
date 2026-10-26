@@ -1,1 +1,44 @@
 
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title"
+        content="Watch this video on YouTube">
+  <meta property="og:description"
+        content="View the video on YouTube.">
+  <meta property="og:image"
+        content="https://img.youtube.com/vi/czPA_0Gq6iE/hqdefault.jpg">
+  <meta property="og:type" content="website">
+
+  <title>YouTube Video Demo</title>
+</head>
+<body style="font-family:Arial,sans-serif;max-width:560px;margin:30px auto;padding:16px">
+  <h2>YouTube Video Demo</h2>
+
+  <a href="https://youtu.be/czPA_0Gq6iE">
+    <img
+      src="https://img.youtube.com/vi/czPA_0Gq6iE/hqdefault.jpg"
+      alt="Video thumbnail"
+      style="width:100%;border-radius:12px">
+  </a>
+
+  <p>This demo links to the original YouTube video.</p>
+  <p id="visits"></p>
+
+  <a href="https://youtu.be/czPA_0Gq6iE">
+    Watch on YouTube
+  </a>
+
+  <script>
+    const key = "demo-visits";
+    const count = Number(localStorage.getItem(key) || 0) + 1;
+    localStorage.setItem(key, count);
+    document.getElementById("visits").textContent =
+      "Visits on this browser: " + count;
+  </script>
+</body>
+</html>
